@@ -6,7 +6,7 @@ plugins {
 
 android {
     namespace = "com.snow.eagleguardian"
-    compileSdk = 34
+    compileSdk = 36
 
     defaultConfig {
         applicationId = "com.snow.eagleguardian"
@@ -63,6 +63,23 @@ dependencies {
     implementation(libs.androidx.ui.tooling.preview)
     implementation(libs.androidx.material3)
     implementation(libs.generativeai)
+    
+    // 导航组件
+    implementation("androidx.navigation:navigation-compose:2.7.5")
+    
+    // 协程
+    implementation("org.jetbrains.kotlinx:kotlinx-coroutines-android:1.7.3")
+    
+    // 数据存储
+    implementation("androidx.datastore:datastore-preferences:1.0.0")
+    
+    // 权限处理
+    implementation("com.google.accompanist:accompanist-permissions:0.32.0")
+    
+    // 系统服务
+    implementation("androidx.work:work-runtime-ktx:2.9.0")
+    implementation(libs.androidx.compose.foundation)
+
     testImplementation(libs.junit)
     androidTestImplementation(libs.androidx.junit)
     androidTestImplementation(libs.androidx.espresso.core)

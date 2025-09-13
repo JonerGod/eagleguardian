@@ -1,11 +1,92 @@
 <resources>
-    <string name="app_name">EagleGuardian</string>
-    <string name="action_go">Go</string>
-    <string name="baking_title">Baking with Gemini</string>
-    <string name="label_prompt">Prompt</string>
-    <string name="prompt_placeholder">Provide a recipe for the baked goods in the image</string>
-    <string name="image1_description">Cupcake</string>
-    <string name="image2_description">Cookies</string>
-    <string name="image3_description">Cake</string>
-    <string name="results_placeholder">(Results will appear here)</string>
+    <string name="app_name">小鹰守护</string>
+    
+    <!-- 主界面 -->
+    <string name="welcome_title">小鹰守护</string>
+    <string name="welcome_subtitle">保护你的眼睛，健康使用设备</string>
+    <string name="today_usage">今日使用时间</string>
+    <string name="remaining_time">剩余时间</string>
+    <string name="break_reminder">休息提醒</string>
+    <string name="distance_warning">距离过近警告</string>
+    
+    <!-- 应用管理 -->
+    <string name="app_management">应用管理</string>
+    <string name="blacklist_apps">限制应用</string>
+    <string name="whitelist_apps">允许应用</string>
+    <string name="time_limit">时间限制</string>
+    <string name="daily_limit">每日限制</string>
+    <string name="single_use_limit">单次使用限制</string>
+    
+    <!-- 视力保护 -->
+    <string name="eye_protection">视力保护</string>
+    <string name="distance_monitor">距离监控</string>
+    <string name="break_reminder_settings">休息提醒设置</string>
+    <string name="night_mode">夜间护眼模式</string>
+    <string name="take_break">该休息了！</string>
+    <string name="stand_up">请站起来活动1分钟</string>
+    <string name="too_close">距离屏幕太近了！</string>
+    <string name="move_away">请保持30厘米以上距离</string>
+    
+    <!-- 家长控制 -->
+    <string name="parent_control">家长控制</string>
+    <string name="password_settings">密码设置</string>
+    <string name="usage_report">使用报告</string>
+    <string name="remote_management">远程管理</string>
+    <string name="enter_password">请输入密码</string>
+    <string name="wrong_password">密码错误</string>
+    <string name="settings_locked">设置已锁定</string>
+    
+    <!-- 通用 -->
+    <string name="ok">确定</string>
+    <string name="cancel">取消</string>
+    <string name="save">保存</string>
+    <string name="settings">设置</string>
+    <string name="back">返回</string>
+    <string name="minutes">分钟</string>
+    <string name="hours">小时</string>
+    <string name="on">开启</string>
+    <string name="off">关闭</string>
+    
+    <!-- 导航 -->
+    <string name="home">首页</string>
+    <string name="app_management_nav">应用管理</string>
+    <string name="eye_protection_nav">视力保护</string>
+    <string name="parent_control_nav">家长控制</string>
+    
+    <!-- 快捷功能 -->
+    <string name="quick_actions">快捷功能</string>
+    <string name="usage_report_title">使用报告</string>
+    
+    <!-- 状态提醒 -->
+    <string name="status_alerts">状态提醒</string>
+    <string name="next_break_in_5min">距离下次休息还有5分钟</string>
+    <string name="distance_monitor_normal">距离监控正常</string>
+    
+    <!-- 设置项目 -->
+    <string name="break_interval_settings">休息间隔设置</string>
+    <string name="break_duration_settings">休息时长设置</string>
+    <string name="distance_threshold_settings">距离阈值设置</string>
+    <string name="night_mode_time">夜间模式时间</string>
+    <string name="app_time_limits">应用时间限制</string>
+    <string name="eye_protection_settings">视力保护设置</string>
+    <string name="usage_statistics">使用统计</string>
+    <string name="backup_restore">备份与恢复</string>
+    
+    <!-- 描述 -->
+    <string name="manage_app_usage_time">管理各应用的使用时间</string>
+    <string name="adjust_distance_monitor">调整距离监控和休息提醒</string>
+    <string name="view_detailed_analytics">查看详细的使用数据分析</string>
+    <string name="backup_settings_cloud">备份设置到云端</string>
+    <string name="break_interval_desc">每%d分钟提醒休息</string>
+    <string name="break_duration_desc">休息%d分钟</string>
+    <string name="distance_threshold_desc">距离小于%d厘米时警告</string>
+    <string name="night_mode_time_desc">20:00 - 07:00</string>
+    
+    <!-- 语言设置 -->
+    <string name="language_settings">语言设置</string>
+    <string name="select_language">选择语言</string>
+    <string name="language_chinese">简体中文</string>
+    <string name="language_english">English</string>
+    <string name="language_japanese">日本語</string>
+    <string name="language_changed">语言切换成功</string>
 </resources>

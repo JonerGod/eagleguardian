@@ -1,0 +1,92 @@
+<resources>
+    <string name="app_name">イーグルガーディアン</string>
+    
+    <!-- Main Interface -->
+    <string name="welcome_title">イーグルガーディアン</string>
+    <string name="welcome_subtitle">目を守り、健康的にデバイスを使用</string>
+    <string name="today_usage">今日の使用時間</string>
+    <string name="remaining_time">残り時間</string>
+    <string name="break_reminder">休憩リマインダー</string>
+    <string name="distance_warning">距離警告</string>
+    
+    <!-- App Management -->
+    <string name="app_management">アプリ管理</string>
+    <string name="blacklist_apps">制限アプリ</string>
+    <string name="whitelist_apps">許可アプリ</string>
+    <string name="time_limit">時間制限</string>
+    <string name="daily_limit">日次制限</string>
+    <string name="single_use_limit">単回使用制限</string>
+    
+    <!-- Eye Protection -->
+    <string name="eye_protection">目の保護</string>
+    <string name="distance_monitor">距離監視</string>
+    <string name="break_reminder_settings">休憩リマインダー設定</string>
+    <string name="night_mode">夜間アイケアモード</string>
+    <string name="take_break">休憩の時間です！</string>
+    <string name="stand_up">1分間立ち上がって動いてください</string>
+    <string name="too_close">画面に近すぎます！</string>
+    <string name="move_away">30cm以上の距離を保ってください</string>
+    
+    <!-- Parent Control -->
+    <string name="parent_control">ペアレンタルコントロール</string>
+    <string name="password_settings">パスワード設定</string>
+    <string name="usage_report">使用レポート</string>
+    <string name="remote_management">リモート管理</string>
+    <string name="enter_password">パスワードを入力</string>
+    <string name="wrong_password">パスワードが間違っています</string>
+    <string name="settings_locked">設定がロックされています</string>
+    
+    <!-- Common -->
+    <string name="ok">OK</string>
+    <string name="cancel">キャンセル</string>
+    <string name="save">保存</string>
+    <string name="settings">設定</string>
+    <string name="back">戻る</string>
+    <string name="minutes">分</string>
+    <string name="hours">時間</string>
+    <string name="on">オン</string>
+    <string name="off">オフ</string>
+    
+    <!-- Navigation -->
+    <string name="home">ホーム</string>
+    <string name="app_management_nav">アプリ管理</string>
+    <string name="eye_protection_nav">目の保護</string>
+    <string name="parent_control_nav">ペアレンタルコントロール</string>
+    
+    <!-- Quick Actions -->
+    <string name="quick_actions">クイックアクション</string>
+    <string name="usage_report_title">使用レポート</string>
+    
+    <!-- Status Alerts -->
+    <string name="status_alerts">ステータスアラート</string>
+    <string name="next_break_in_5min">次の休憩まで5分</string>
+    <string name="distance_monitor_normal">距離監視は正常です</string>
+    
+    <!-- Settings Items -->
+    <string name="break_interval_settings">休憩間隔設定</string>
+    <string name="break_duration_settings">休憩時間設定</string>
+    <string name="distance_threshold_settings">距離閾値設定</string>
+    <string name="night_mode_time">ナイトモード時間</string>
+    <string name="app_time_limits">アプリ時間制限</string>
+    <string name="eye_protection_settings">目の保護設定</string>
+    <string name="usage_statistics">使用統計</string>
+    <string name="backup_restore">バックアップと復元</string>
+    
+    <!-- Descriptions -->
+    <string name="manage_app_usage_time">アプリの使用時間を管理</string>
+    <string name="adjust_distance_monitor">距離監視と休憩リマインダーを調整</string>
+    <string name="view_detailed_analytics">詳細な使用分析を表示</string>
+    <string name="backup_settings_cloud">設定をクラウドにバックアップ</string>
+    <string name="break_interval_desc">%d分ごとに休憩を促す</string>
+    <string name="break_duration_desc">%d分間休憩</string>
+    <string name="distance_threshold_desc">距離が%dcm未満の時に警告</string>
+    <string name="night_mode_time_desc">20:00 - 07:00</string>
+    
+    <!-- Language Settings -->
+    <string name="language_settings">言語設定</string>
+    <string name="select_language">言語を選択</string>
+    <string name="language_chinese">简体中文</string>
+    <string name="language_english">English</string>
+    <string name="language_japanese">日本語</string>
+    <string name="language_changed">言語が正常に変更されました</string>
+</resources>

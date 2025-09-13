@@ -1,0 +1,92 @@
+<resources>
+    <string name="app_name">Eagle Guardian</string>
+    
+    <!-- Main Interface -->
+    <string name="welcome_title">Eagle Guardian</string>
+    <string name="welcome_subtitle">Protect your eyes, use devices healthily</string>
+    <string name="today_usage">Today\'s Usage</string>
+    <string name="remaining_time">Remaining Time</string>
+    <string name="break_reminder">Break Reminder</string>
+    <string name="distance_warning">Distance Warning</string>
+    
+    <!-- App Management -->
+    <string name="app_management">App Management</string>
+    <string name="blacklist_apps">Restricted Apps</string>
+    <string name="whitelist_apps">Allowed Apps</string>
+    <string name="time_limit">Time Limit</string>
+    <string name="daily_limit">Daily Limit</string>
+    <string name="single_use_limit">Single Use Limit</string>
+    
+    <!-- Eye Protection -->
+    <string name="eye_protection">Eye Protection</string>
+    <string name="distance_monitor">Distance Monitor</string>
+    <string name="break_reminder_settings">Break Reminder Settings</string>
+    <string name="night_mode">Night Eye Care Mode</string>
+    <string name="take_break">Time for a break!</string>
+    <string name="stand_up">Please stand up and move for 1 minute</string>
+    <string name="too_close">Too close to the screen!</string>
+    <string name="move_away">Please keep 30cm distance</string>
+    
+    <!-- Parent Control -->
+    <string name="parent_control">Parent Control</string>
+    <string name="password_settings">Password Settings</string>
+    <string name="usage_report">Usage Report</string>
+    <string name="remote_management">Remote Management</string>
+    <string name="enter_password">Enter Password</string>
+    <string name="wrong_password">Wrong Password</string>
+    <string name="settings_locked">Settings Locked</string>
+    
+    <!-- Common -->
+    <string name="ok">OK</string>
+    <string name="cancel">Cancel</string>
+    <string name="save">Save</string>
+    <string name="settings">Settings</string>
+    <string name="back">Back</string>
+    <string name="minutes">minutes</string>
+    <string name="hours">hours</string>
+    <string name="on">On</string>
+    <string name="off">Off</string>
+    
+    <!-- Navigation -->
+    <string name="home">Home</string>
+    <string name="app_management_nav">App Management</string>
+    <string name="eye_protection_nav">Eye Protection</string>
+    <string name="parent_control_nav">Parent Control</string>
+    
+    <!-- Quick Actions -->
+    <string name="quick_actions">Quick Actions</string>
+    <string name="usage_report_title">Usage Report</string>
+    
+    <!-- Status Alerts -->
+    <string name="status_alerts">Status Alerts</string>
+    <string name="next_break_in_5min">Next break in 5 minutes</string>
+    <string name="distance_monitor_normal">Distance monitor is normal</string>
+    
+    <!-- Settings Items -->
+    <string name="break_interval_settings">Break Interval Settings</string>
+    <string name="break_duration_settings">Break Duration Settings</string>
+    <string name="distance_threshold_settings">Distance Threshold Settings</string>
+    <string name="night_mode_time">Night Mode Time</string>
+    <string name="app_time_limits">App Time Limits</string>
+    <string name="eye_protection_settings">Eye Protection Settings</string>
+    <string name="usage_statistics">Usage Statistics</string>
+    <string name="backup_restore">Backup &amp; Restore</string>
+    
+    <!-- Descriptions -->
+    <string name="manage_app_usage_time">Manage app usage time</string>
+    <string name="adjust_distance_monitor">Adjust distance monitor and break reminders</string>
+    <string name="view_detailed_analytics">View detailed usage analytics</string>
+    <string name="backup_settings_cloud">Backup settings to cloud</string>
+    <string name="break_interval_desc">Remind to take a break every %d minutes</string>
+    <string name="break_duration_desc">Rest for %d minutes</string>
+    <string name="distance_threshold_desc">Warn when distance is less than %d cm</string>
+    <string name="night_mode_time_desc">20:00 - 07:00</string>
+    
+    <!-- Language Settings -->
+    <string name="language_settings">Language Settings</string>
+    <string name="select_language">Select Language</string>
+    <string name="language_chinese">简体中文</string>
+    <string name="language_english">English</string>
+    <string name="language_japanese">日本語</string>
+    <string name="language_changed">Language changed successfully</string>
+</resources>
