@@ -17,6 +17,7 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.text.font.FontWeight
+import androidx.compose.ui.text.style.TextOverflow
 import androidx.compose.ui.unit.dp
 import android.util.Log
 import com.snow.eagleguardian.R
@@ -39,10 +40,10 @@ fun AppManagementScreen(
     // 模拟应用数据
     val sampleApps = remember {
         listOf(
-            AppInfo("com.example.game1", "游戏1", null, false, true, false, 30, 60),
-            AppInfo("com.example.video", "视频应用", null, false, true, false, 45, 90),
-            AppInfo("com.example.study", "学习应用", null, false, false, true, 0, 0),
-            AppInfo("com.example.reading", "阅读应用", null, false, false, true, 0, 0)
+            AppInfo("com.example.game1", "Game1", null, false, true, false, 30, 60),
+            AppInfo("com.example.video", "Video", null, false, true, false, 45, 90),
+            AppInfo("com.example.study", "Study", null, false, false, true, 0, 0),
+            AppInfo("com.example.reading", "Reader", null, false, false, true, 0, 0)
         )
     }
     
@@ -52,7 +53,7 @@ fun AppManagementScreen(
                 title = { Text(stringResource(R.string.app_management)) },
                 navigationIcon = {
                     IconButton(onClick = onBack) {
-                        Icon(Icons.Default.ArrowBack, contentDescription = "返回")
+                        Icon(Icons.Default.ArrowBack, contentDescription = stringResource(R.string.back))
                     }
                 },
                 colors = TopAppBarDefaults.topAppBarColors(
@@ -71,17 +72,34 @@ fun AppManagementScreen(
             // 标签页
             TabRow(
                 selectedTabIndex = selectedTab,
-                containerColor = MaterialTheme.colorScheme.surface
+                containerColor = MaterialTheme.colorScheme.surface,
+                modifier = Modifier.fillMaxWidth()
             ) {
                 Tab(
                     selected = selectedTab == 0,
                     onClick = { selectedTab = 0 },
-                    text = { Text(stringResource(R.string.blacklist_apps)) }
+                    modifier = Modifier.weight(1f),
+                    text = { 
+                        Text(
+                            text = stringResource(R.string.blacklist_apps),
+                            style = MaterialTheme.typography.labelMedium,
+                            maxLines = 1,
+                            overflow = TextOverflow.Ellipsis
+                        ) 
+                    }
                 )
                 Tab(
                     selected = selectedTab == 1,
                     onClick = { selectedTab = 1 },
-                    text = { Text(stringResource(R.string.whitelist_apps)) }
+                    modifier = Modifier.weight(1f),
+                    text = { 
+                        Text(
+                            text = stringResource(R.string.whitelist_apps),
+                            style = MaterialTheme.typography.labelMedium,
+                            maxLines = 1,
+                            overflow = TextOverflow.Ellipsis
+                        ) 
+                    }
                 )
             }
             
@@ -124,7 +142,7 @@ fun AppManagementScreen(
                 selectedApp?.let { app ->
                     // 这里可以保存到 DataStore 或数据库
                     // 暂时只更新本地状态
-                    Log.d("AppManagement", "保存应用 ${app.packageName} 的时间限制: 单次=${singleLimit}分钟, 每日=${dailyLimit}分钟")
+                    Log.d("AppManagement", "保存时间限制设置")
                 }
                 showTimeLimitDialog = false
                 selectedApp = null
@@ -200,14 +218,14 @@ fun AppItemCard(
                     Row {
                         if (app.singleUseLimitMinutes > 0) {
                             TimeLimitChip(
-                                label = "单次: ${app.singleUseLimitMinutes}分钟",
+                                label = stringResource(R.string.single_use_limit, app.singleUseLimitMinutes),
                                 color = WarningOrange
                             )
                             Spacer(modifier = Modifier.width(8.dp))
                         }
                         if (app.dailyLimitMinutes > 0) {
                             TimeLimitChip(
-                                label = "每日: ${app.dailyLimitMinutes}分钟",
+                                label = stringResource(R.string.daily_use_limit, app.dailyLimitMinutes),
                                 color = ErrorRed
                             )
                         }
@@ -217,7 +235,7 @@ fun AppItemCard(
             
             Icon(
                 Icons.Default.Settings,
-                contentDescription = "设置",
+                contentDescription = stringResource(R.string.settings_icon),
                 tint = MaterialTheme.colorScheme.onSurface.copy(alpha = 0.7f)
             )
         }
@@ -257,20 +275,20 @@ fun TimeLimitDialog(
     
     AlertDialog(
         onDismissRequest = onDismiss,
-        title = { Text("设置时间限制 - ${app.appName}") },
+        title = { Text(stringResource(R.string.set_time_limit_for, app.appName)) },
         text = {
             Column {
                 OutlinedTextField(
                     value = singleLimit,
                     onValueChange = { singleLimit = it },
-                    label = { Text("单次使用限制（分钟）") },
+                    label = { Text(stringResource(R.string.single_use_limit_minutes)) },
                     modifier = Modifier.fillMaxWidth()
                 )
                 Spacer(modifier = Modifier.height(16.dp))
                 OutlinedTextField(
                     value = dailyLimit,
                     onValueChange = { dailyLimit = it },
-                    label = { Text("每日使用限制（分钟）") },
+                    label = { Text(stringResource(R.string.daily_use_limit_minutes)) },
                     modifier = Modifier.fillMaxWidth()
                 )
             }
@@ -283,12 +301,12 @@ fun TimeLimitDialog(
                     onSave(single, daily)
                 }
             ) {
-                Text("保存")
+                Text(stringResource(R.string.save_button))
             }
         },
         dismissButton = {
             TextButton(onClick = onDismiss) {
-                Text("取消")
+                Text(stringResource(R.string.cancel_button))
             }
         }
     )

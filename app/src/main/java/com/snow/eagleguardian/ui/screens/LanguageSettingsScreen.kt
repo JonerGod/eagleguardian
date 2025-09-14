@@ -1,5 +1,8 @@
 package com.snow.eagleguardian.ui.screens
 
+import android.app.Activity
+import android.content.Context
+import android.content.Intent
 import androidx.compose.foundation.clickable
 import androidx.compose.foundation.interaction.MutableInteractionSource
 import androidx.compose.foundation.layout.*
@@ -19,6 +22,7 @@ import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.unit.dp
 import androidx.lifecycle.compose.collectAsStateWithLifecycle
+import com.snow.eagleguardian.MainActivity
 import com.snow.eagleguardian.R
 import com.snow.eagleguardian.ui.icons.CustomIcons
 import com.snow.eagleguardian.ui.theme.EagleBlue40
@@ -88,6 +92,10 @@ fun LanguageSettingsScreen(
                     LanguageManager.setLanguage(context, selectedLanguage)
                     showLanguageDialog = false
                     showSuccessSnackbar = true
+                    
+                    // 延迟重启 Activity 以应用语言更改
+                    kotlinx.coroutines.delay(1000)
+                    restartActivity(context)
                 }
             },
             onDismiss = { showLanguageDialog = false }
@@ -260,5 +268,15 @@ fun LanguageItem(
             style = MaterialTheme.typography.bodyLarge,
             color = if (isSelected) EagleBlue40 else MaterialTheme.colorScheme.onSurface
         )
+    }
+}
+
+private fun restartActivity(context: Context) {
+    val activity = context as? Activity
+    activity?.let {
+        val intent = Intent(it, MainActivity::class.java)
+        intent.flags = Intent.FLAG_ACTIVITY_NEW_TASK or Intent.FLAG_ACTIVITY_CLEAR_TASK
+        it.startActivity(intent)
+        it.finish()
     }
 }

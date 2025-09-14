@@ -42,7 +42,7 @@ fun EyeProtectionScreen(
                 title = { Text(stringResource(R.string.eye_protection)) },
                 navigationIcon = {
                     IconButton(onClick = onBack) {
-                        Icon(Icons.Default.ArrowBack, contentDescription = "返回")
+                        Icon(Icons.Default.ArrowBack, contentDescription = stringResource(R.string.back))
                     }
                 },
                 colors = TopAppBarDefaults.topAppBarColors(
@@ -92,7 +92,7 @@ fun EyeProtectionScreen(
             // 设置选项
             item {
                 Text(
-                    text = "设置选项",
+                    text = stringResource(R.string.settings_options),
                     style = MaterialTheme.typography.titleMedium,
                     fontWeight = FontWeight.Bold
                 )
@@ -100,8 +100,8 @@ fun EyeProtectionScreen(
             
             item {
                 SettingItemCard(
-                    title = "休息间隔设置",
-                    subtitle = "每${breakInterval}分钟提醒休息",
+                    title = stringResource(R.string.break_interval_settings),
+                    subtitle = stringResource(R.string.break_interval_desc, breakInterval),
                     icon = CustomIcons.TimeManagement,
                     onClick = { 
                         // 打开间隔设置对话框
@@ -112,8 +112,8 @@ fun EyeProtectionScreen(
             
             item {
                 SettingItemCard(
-                    title = "休息时长设置",
-                    subtitle = "休息${breakDuration}分钟",
+                    title = stringResource(R.string.break_duration_settings),
+                    subtitle = stringResource(R.string.break_duration_desc, breakDuration),
                     icon = CustomIcons.BreakReminder,
                     onClick = { 
                         // 打开时长设置对话框
@@ -124,8 +124,8 @@ fun EyeProtectionScreen(
             
             item {
                 SettingItemCard(
-                    title = "距离阈值设置",
-                    subtitle = "距离小于${distanceThreshold}厘米时警告",
+                    title = stringResource(R.string.distance_threshold_settings),
+                    subtitle = stringResource(R.string.distance_warning_threshold, distanceThreshold),
                     icon = CustomIcons.DistanceMonitor,
                     onClick = { 
                         // 打开距离设置对话框
@@ -136,8 +136,8 @@ fun EyeProtectionScreen(
             
             item {
                 SettingItemCard(
-                    title = "夜间模式时间",
-                    subtitle = "20:00 - 07:00",
+                    title = stringResource(R.string.night_mode_time),
+                    subtitle = stringResource(R.string.night_mode_time_desc),
                     icon = CustomIcons.NightMode,
                     onClick = { 
                         // 打开时间设置对话框
@@ -204,12 +204,12 @@ fun DistanceMonitorCard(
                     horizontalArrangement = Arrangement.SpaceBetween
                 ) {
                     DistanceInfoItem(
-                        label = "当前距离",
+                        label = stringResource(R.string.current_distance),
                         value = "${currentDistance}cm",
                         color = if (currentDistance < threshold) ErrorRed else EagleGreen40
                     )
                     DistanceInfoItem(
-                        label = "警告阈值",
+                        label = stringResource(R.string.warning_threshold),
                         value = "${threshold}cm",
                         color = MaterialTheme.colorScheme.onSurface
                     )
@@ -284,13 +284,13 @@ fun BreakReminderCard(
                     horizontalArrangement = Arrangement.SpaceBetween
                 ) {
                     BreakInfoItem(
-                        label = "下次休息",
-                        value = "${nextBreakIn}分钟后",
+                        label = stringResource(R.string.next_break),
+                        value = stringResource(R.string.minutes_after, nextBreakIn),
                         color = if (nextBreakIn <= 5) WarningOrange else EagleGreen40
                     )
                     BreakInfoItem(
-                        label = "休息间隔",
-                        value = "每${interval}分钟",
+                        label = stringResource(R.string.break_interval_label),
+                        value = stringResource(R.string.every_minutes, interval),
                         color = MaterialTheme.colorScheme.onSurface
                     )
                 }
@@ -359,7 +359,7 @@ fun NightModeCard(
             if (isEnabled) {
                 Spacer(modifier = Modifier.height(16.dp))
                 Text(
-                    text = if (isActive) "当前处于夜间护眼模式" else "夜间护眼模式已启用",
+                    text = if (isActive) stringResource(R.string.night_mode_active) else stringResource(R.string.night_mode_enabled),
                     style = MaterialTheme.typography.bodyMedium,
                     color = if (isActive) EagleBlue40 else EagleGreen40
                 )
@@ -462,7 +462,7 @@ fun SettingItemCard(
             }
             Icon(
                 Icons.Default.KeyboardArrowRight,
-                contentDescription = "进入",
+                contentDescription = stringResource(R.string.enter),
                 tint = MaterialTheme.colorScheme.onSurface.copy(alpha = 0.5f)
             )
         }

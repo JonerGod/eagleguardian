@@ -11,11 +11,11 @@
     
     <!-- 应用管理 -->
     <string name="app_management">应用管理</string>
-    <string name="blacklist_apps">限制应用</string>
-    <string name="whitelist_apps">允许应用</string>
+    <string name="blacklist_apps">已限制</string>
+    <string name="whitelist_apps">已允许</string>
     <string name="time_limit">时间限制</string>
     <string name="daily_limit">每日限制</string>
-    <string name="single_use_limit">单次使用限制</string>
+    <string name="single_use_limit_label">单次使用限制</string>
     
     <!-- 视力保护 -->
     <string name="eye_protection">视力保护</string>
@@ -49,9 +49,9 @@
     
     <!-- 导航 -->
     <string name="home">首页</string>
-    <string name="app_management_nav">应用管理</string>
-    <string name="eye_protection_nav">视力保护</string>
-    <string name="parent_control_nav">家长控制</string>
+    <string name="app_management_nav">应用</string>
+    <string name="eye_protection_nav">护眼</string>
+    <string name="parent_control_nav">控制</string>
     
     <!-- 快捷功能 -->
     <string name="quick_actions">快捷功能</string>
@@ -89,4 +89,98 @@
     <string name="language_english">English</string>
     <string name="language_japanese">日本語</string>
     <string name="language_changed">语言切换成功</string>
+    
+    <!-- 使用时间相关 -->
+    <string name="today_usage_time">1时30分</string>
+    <string name="remaining_time_value">30分</string>
+    <string name="daily_limit_value">2时</string>
+    <string name="used_time">已使用</string>
+    <string name="daily_limit_label">每日限制</string>
+    
+    <!-- 视力保护相关 -->
+    <string name="current_distance">当前距离</string>
+    <string name="warning_threshold">警告阈值</string>
+    <string name="next_break">下次休息</string>
+    <string name="break_interval_label">休息间隔</string>
+    <string name="minutes_after">分钟后</string>
+    <string name="every_minutes">每%d分钟</string>
+    <string name="break_duration_minutes">休息%d分钟</string>
+    <string name="distance_warning_threshold">距离小于%d厘米时警告</string>
+    <string name="night_mode_active">当前处于夜间护眼模式</string>
+    <string name="night_mode_enabled">夜间护眼模式已启用</string>
+    <string name="settings_options">设置选项</string>
+    <string name="enter">进入</string>
+    
+    <!-- 日志消息 -->
+    <string name="log_open_usage_report">打开使用报告</string>
+    <string name="log_open_interval_settings">打开间隔设置对话框</string>
+    <string name="log_open_duration_settings">打开时长设置对话框</string>
+    <string name="log_open_distance_settings">打开距离设置对话框</string>
+    <string name="log_open_time_settings">打开时间设置对话框</string>
+    
+    <!-- 注释 -->
+    <string name="welcome_card_comment">欢迎卡片</string>
+    <string name="usage_time_card_comment">今日使用时间卡片</string>
+    <string name="quick_actions_comment">功能快捷入口</string>
+    <string name="status_alerts_comment">状态提醒</string>
+    <string name="distance_monitor_card_comment">距离监控状态卡片</string>
+    <string name="break_reminder_card_comment">休息提醒状态卡片</string>
+    <string name="night_mode_card_comment">夜间护眼模式卡片</string>
+    <string name="settings_options_comment">设置选项</string>
+    
+    <!-- 应用管理相关 -->
+    <string name="game1">游戏1</string>
+    <string name="video_app">视频应用</string>
+    <string name="study_app">学习应用</string>
+    <string name="reading_app">阅读应用</string>
+    <string name="tabs_comment">标签页</string>
+    <string name="app_list_comment">应用列表</string>
+    <string name="time_limit_dialog_comment">时间限制设置对话框</string>
+    <string name="save_time_limit_settings">保存时间限制设置</string>
+    <string name="save_to_datastore">这里可以保存到 DataStore 或数据库</string>
+    <string name="temporarily_update_local">暂时只更新本地状态</string>
+    <string name="app_icon_placeholder">应用图标占位符</string>
+    <string name="single_use_limit">单次: %d分钟</string>
+    <string name="daily_use_limit">每日: %d分钟</string>
+    <string name="settings_icon">设置</string>
+    <string name="set_time_limit_for">设置时间限制 - %s</string>
+    <string name="single_use_limit_minutes">单次使用限制（分钟）</string>
+    <string name="daily_use_limit_minutes">每日使用限制（分钟）</string>
+    <string name="save_button">保存</string>
+    <string name="cancel_button">取消</string>
+    
+    <!-- 家长控制相关 -->
+    <string name="advanced_settings">高级设置</string>
+    <string name="app_time_limits_title">应用时间限制</string>
+    <string name="eye_protection_settings_title">视力保护设置</string>
+    <string name="usage_statistics_title">使用统计</string>
+    <string name="backup_restore_title">备份与恢复</string>
+    <string name="password_protection_enabled">密码保护已启用</string>
+    <string name="password_protection_prompt">请设置家长密码以保护设置</string>
+    <string name="set_password_button">设置密码</string>
+    <string name="view_today_usage">查看今日使用情况</string>
+    <string name="view_action">查看</string>
+    <string name="remote_management_enabled">远程管理已启用</string>
+    <string name="remote_management_prompt">启用后可通过其他设备管理</string>
+    <string name="device_admin_title">设备管理员</string>
+    <string name="uninstall_protection_enabled">防卸载保护已启用</string>
+    <string name="uninstall_protection_prompt">启用后防止应用被卸载</string>
+    <string name="enter_action">进入</string>
+    <string name="set_parent_password">设置家长密码</string>
+    <string name="password_label">密码</string>
+    <string name="confirm_password_label">确认密码</string>
+    <string name="hide_password">隐藏密码</string>
+    <string name="show_password">显示密码</string>
+    <string name="confirm_button">确定</string>
+    <string name="today_usage_report">今日使用报告</string>
+    <string name="total_usage_time">总使用时间</string>
+    <string name="game_time">游戏时间</string>
+    <string name="study_time">学习时间</string>
+    <string name="break_count">休息次数</string>
+    <string name="distance_warnings">距离警告</string>
+    <string name="usage_time_sample">1小时30分钟</string>
+    <string name="game_time_sample">45分钟</string>
+    <string name="study_time_sample">30分钟</string>
+    <string name="break_count_sample">3次</string>
+    <string name="distance_warnings_sample">2次</string>
 </resources>

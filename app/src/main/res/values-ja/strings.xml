@@ -11,11 +11,11 @@
     
     <!-- App Management -->
     <string name="app_management">アプリ管理</string>
-    <string name="blacklist_apps">制限アプリ</string>
-    <string name="whitelist_apps">許可アプリ</string>
+    <string name="blacklist_apps">ブロック</string>
+    <string name="whitelist_apps">許可</string>
     <string name="time_limit">時間制限</string>
     <string name="daily_limit">日次制限</string>
-    <string name="single_use_limit">単回使用制限</string>
+    <string name="single_use_limit_label">単回使用制限</string>
     
     <!-- Eye Protection -->
     <string name="eye_protection">目の保護</string>
@@ -49,9 +49,9 @@
     
     <!-- Navigation -->
     <string name="home">ホーム</string>
-    <string name="app_management_nav">アプリ管理</string>
-    <string name="eye_protection_nav">目の保護</string>
-    <string name="parent_control_nav">ペアレンタルコントロール</string>
+    <string name="app_management_nav">アプリ</string>
+    <string name="eye_protection_nav">目</string>
+    <string name="parent_control_nav">制御</string>
     
     <!-- Quick Actions -->
     <string name="quick_actions">クイックアクション</string>
@@ -89,4 +89,98 @@
     <string name="language_english">English</string>
     <string name="language_japanese">日本語</string>
     <string name="language_changed">言語が正常に変更されました</string>
+    
+    <!-- 使用時間関連 -->
+    <string name="today_usage_time">1時30分</string>
+    <string name="remaining_time_value">30分</string>
+    <string name="daily_limit_value">2時</string>
+    <string name="used_time">使用済み</string>
+    <string name="daily_limit_label">日次制限</string>
+    
+    <!-- 目の保護関連 -->
+    <string name="current_distance">現在の距離</string>
+    <string name="warning_threshold">警告閾値</string>
+    <string name="next_break">次の休憩</string>
+    <string name="break_interval_label">休憩間隔</string>
+    <string name="minutes_after">分後</string>
+    <string name="every_minutes">%d分ごと</string>
+    <string name="break_duration_minutes">%d分間休憩</string>
+    <string name="distance_warning_threshold">距離が%dcm未満の時に警告</string>
+    <string name="night_mode_active">現在ナイトアイケアモード中</string>
+    <string name="night_mode_enabled">ナイトアイケアモードが有効</string>
+    <string name="settings_options">設定オプション</string>
+    <string name="enter">入る</string>
+    
+    <!-- ログメッセージ -->
+    <string name="log_open_usage_report">使用レポートを開く</string>
+    <string name="log_open_interval_settings">間隔設定ダイアログを開く</string>
+    <string name="log_open_duration_settings">時間設定ダイアログを開く</string>
+    <string name="log_open_distance_settings">距離設定ダイアログを開く</string>
+    <string name="log_open_time_settings">時間設定ダイアログを開く</string>
+    
+    <!-- コメント -->
+    <string name="welcome_card_comment">ウェルカムカード</string>
+    <string name="usage_time_card_comment">今日の使用時間カード</string>
+    <string name="quick_actions_comment">クイックアクション</string>
+    <string name="status_alerts_comment">ステータスアラート</string>
+    <string name="distance_monitor_card_comment">距離監視ステータスカード</string>
+    <string name="break_reminder_card_comment">休憩リマインダーステータスカード</string>
+    <string name="night_mode_card_comment">ナイトモードカード</string>
+    <string name="settings_options_comment">設定オプション</string>
+    
+    <!-- アプリ管理関連 -->
+    <string name="game1">ゲーム1</string>
+    <string name="video_app">動画アプリ</string>
+    <string name="study_app">学習アプリ</string>
+    <string name="reading_app">読書アプリ</string>
+    <string name="tabs_comment">タブ</string>
+    <string name="app_list_comment">アプリリスト</string>
+    <string name="time_limit_dialog_comment">時間制限設定ダイアログ</string>
+    <string name="save_time_limit_settings">時間制限設定を保存</string>
+    <string name="save_to_datastore">ここでDataStoreやデータベースに保存可能</string>
+    <string name="temporarily_update_local">一時的にローカル状態のみ更新</string>
+    <string name="app_icon_placeholder">アプリアイコン占位符</string>
+    <string name="single_use_limit">単回: %d分</string>
+    <string name="daily_use_limit">日次: %d分</string>
+    <string name="settings_icon">設定</string>
+    <string name="set_time_limit_for">時間制限設定 - %s</string>
+    <string name="single_use_limit_minutes">単回使用制限（分）</string>
+    <string name="daily_use_limit_minutes">日次使用制限（分）</string>
+    <string name="save_button">保存</string>
+    <string name="cancel_button">キャンセル</string>
+    
+    <!-- ペアレンタルコントロール関連 -->
+    <string name="advanced_settings">高度な設定</string>
+    <string name="app_time_limits_title">アプリ時間制限</string>
+    <string name="eye_protection_settings_title">目の保護設定</string>
+    <string name="usage_statistics_title">使用統計</string>
+    <string name="backup_restore_title">バックアップと復元</string>
+    <string name="password_protection_enabled">パスワード保護が有効</string>
+    <string name="password_protection_prompt">設定を保護するためにペアレントパスワードを設定してください</string>
+    <string name="set_password_button">パスワード設定</string>
+    <string name="view_today_usage">今日の使用状況を表示</string>
+    <string name="view_action">表示</string>
+    <string name="remote_management_enabled">リモート管理が有効</string>
+    <string name="remote_management_prompt">他のデバイスから管理できるようになります</string>
+    <string name="device_admin_title">デバイス管理者</string>
+    <string name="uninstall_protection_enabled">アンインストール保護が有効</string>
+    <string name="uninstall_protection_prompt">アプリのアンインストールを防ぐために有効化</string>
+    <string name="enter_action">入る</string>
+    <string name="set_parent_password">ペアレントパスワード設定</string>
+    <string name="password_label">パスワード</string>
+    <string name="confirm_password_label">パスワード確認</string>
+    <string name="hide_password">パスワードを隠す</string>
+    <string name="show_password">パスワードを表示</string>
+    <string name="confirm_button">確認</string>
+    <string name="today_usage_report">今日の使用レポート</string>
+    <string name="total_usage_time">総使用時間</string>
+    <string name="game_time">ゲーム時間</string>
+    <string name="study_time">学習時間</string>
+    <string name="break_count">休憩回数</string>
+    <string name="distance_warnings">距離警告</string>
+    <string name="usage_time_sample">1時間30分</string>
+    <string name="game_time_sample">45分</string>
+    <string name="study_time_sample">30分</string>
+    <string name="break_count_sample">3回</string>
+    <string name="distance_warnings_sample">2回</string>
 </resources>

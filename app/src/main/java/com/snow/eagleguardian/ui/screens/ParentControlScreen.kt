@@ -43,7 +43,7 @@ fun ParentControlScreen(
                 title = { Text(stringResource(R.string.parent_control)) },
                 navigationIcon = {
                     IconButton(onClick = onBack) {
-                        Icon(Icons.Default.ArrowBack, contentDescription = "返回")
+                        Icon(Icons.Default.ArrowBack, contentDescription = stringResource(R.string.back))
                     }
                 },
                 colors = TopAppBarDefaults.topAppBarColors(
@@ -89,7 +89,7 @@ fun ParentControlScreen(
             // 设置选项
             item {
                 Text(
-                    text = "高级设置",
+                    text = stringResource(R.string.advanced_settings),
                     style = MaterialTheme.typography.titleMedium,
                     fontWeight = FontWeight.Bold
                 )
@@ -97,8 +97,8 @@ fun ParentControlScreen(
             
             item {
                 ParentControlItemCard(
-                    title = "应用时间限制",
-                    subtitle = "管理各应用的使用时间",
+                    title = stringResource(R.string.app_time_limits_title),
+                    subtitle = stringResource(R.string.manage_app_usage_time),
                     icon = CustomIcons.TimeManagement,
                     onClick = { 
                         // 打开应用时间限制设置
@@ -109,8 +109,8 @@ fun ParentControlScreen(
             
             item {
                 ParentControlItemCard(
-                    title = "视力保护设置",
-                    subtitle = "调整距离监控和休息提醒",
+                    title = stringResource(R.string.eye_protection_settings_title),
+                    subtitle = stringResource(R.string.adjust_distance_monitor),
                     icon = CustomIcons.EyeProtection,
                     onClick = { 
                         // 打开视力保护设置
@@ -121,8 +121,8 @@ fun ParentControlScreen(
             
             item {
                 ParentControlItemCard(
-                    title = "使用统计",
-                    subtitle = "查看详细的使用数据分析",
+                    title = stringResource(R.string.usage_statistics_title),
+                    subtitle = stringResource(R.string.view_detailed_analytics),
                     icon = CustomIcons.UsageReport,
                     onClick = { 
                         // 打开使用统计
@@ -133,8 +133,8 @@ fun ParentControlScreen(
             
             item {
                 ParentControlItemCard(
-                    title = "备份与恢复",
-                    subtitle = "备份设置到云端",
+                    title = stringResource(R.string.backup_restore_title),
+                    subtitle = stringResource(R.string.backup_settings_cloud),
                     icon = CustomIcons.CloudBackup,
                     onClick = { 
                         // 打开备份设置
@@ -209,7 +209,7 @@ fun PasswordProtectionCard(
             
             Spacer(modifier = Modifier.height(12.dp))
             Text(
-                text = if (isPasswordSet) "密码保护已启用" else "请设置家长密码以保护设置",
+                text = if (isPasswordSet) stringResource(R.string.password_protection_enabled) else stringResource(R.string.password_protection_prompt),
                 style = MaterialTheme.typography.bodyMedium,
                 color = if (isPasswordSet) EagleGreen40 else WarningOrange
             )
@@ -222,7 +222,7 @@ fun PasswordProtectionCard(
                         containerColor = WarningOrange
                     )
                 ) {
-                    Text("设置密码")
+                    Text(stringResource(R.string.set_password_button))
                 }
             }
         }
@@ -267,14 +267,14 @@ fun UsageReportCard(
                     fontWeight = FontWeight.Bold
                 )
                 Text(
-                    text = "查看今日使用情况",
+                    text = stringResource(R.string.view_today_usage),
                     style = MaterialTheme.typography.bodyMedium,
                     color = MaterialTheme.colorScheme.onSurface.copy(alpha = 0.7f)
                 )
             }
             Icon(
                 Icons.Default.Settings,
-                contentDescription = "查看",
+                contentDescription = stringResource(R.string.view_action),
                 tint = MaterialTheme.colorScheme.onSurface.copy(alpha = 0.5f)
             )
         }
@@ -324,7 +324,7 @@ fun RemoteManagementCard() {
             
             Spacer(modifier = Modifier.height(12.dp))
             Text(
-                text = if (isEnabled) "远程管理已启用" else "启用后可通过其他设备管理",
+                text = if (isEnabled) stringResource(R.string.remote_management_enabled) else stringResource(R.string.remote_management_prompt),
                 style = MaterialTheme.typography.bodyMedium,
                 color = MaterialTheme.colorScheme.onSurface.copy(alpha = 0.7f)
             )
@@ -362,7 +362,7 @@ fun DeviceManagementCard() {
                     )
                     Spacer(modifier = Modifier.width(12.dp))
                     Text(
-                        text = "设备管理员",
+                        text = stringResource(R.string.device_admin_title),
                         style = MaterialTheme.typography.titleMedium,
                         fontWeight = FontWeight.Bold
                     )
@@ -375,7 +375,7 @@ fun DeviceManagementCard() {
             
             Spacer(modifier = Modifier.height(12.dp))
             Text(
-                text = if (isEnabled) "防卸载保护已启用" else "启用后防止应用被卸载",
+                text = if (isEnabled) stringResource(R.string.uninstall_protection_enabled) else stringResource(R.string.uninstall_protection_prompt),
                 style = MaterialTheme.typography.bodyMedium,
                 color = if (isEnabled) EagleGreen40 else ErrorRed
             )
@@ -431,7 +431,7 @@ fun ParentControlItemCard(
             }
             Icon(
                 Icons.Default.Settings,
-                contentDescription = "进入",
+                contentDescription = stringResource(R.string.enter_action),
                 tint = MaterialTheme.colorScheme.onSurface.copy(alpha = 0.5f)
             )
         }
@@ -450,19 +450,19 @@ fun PasswordDialog(
     
     AlertDialog(
         onDismissRequest = onDismiss,
-        title = { Text("设置家长密码") },
+        title = { Text(stringResource(R.string.set_parent_password)) },
         text = {
             Column {
                 OutlinedTextField(
                     value = password,
                     onValueChange = { password = it },
-                    label = { Text("密码") },
+                    label = { Text(stringResource(R.string.password_label)) },
                     visualTransformation = if (passwordVisible) VisualTransformation.None else PasswordVisualTransformation(),
                     trailingIcon = {
                         IconButton(onClick = { passwordVisible = !passwordVisible }) {
                             Icon(
                                 if (passwordVisible) Icons.Default.Settings else Icons.Default.Settings,
-                                contentDescription = if (passwordVisible) "隐藏密码" else "显示密码"
+                                contentDescription = if (passwordVisible) stringResource(R.string.hide_password) else stringResource(R.string.show_password)
                             )
                         }
                     },
@@ -472,13 +472,13 @@ fun PasswordDialog(
                 OutlinedTextField(
                     value = confirmPassword,
                     onValueChange = { confirmPassword = it },
-                    label = { Text("确认密码") },
+                    label = { Text(stringResource(R.string.confirm_password_label)) },
                     visualTransformation = if (confirmPasswordVisible) VisualTransformation.None else PasswordVisualTransformation(),
                     trailingIcon = {
                         IconButton(onClick = { confirmPasswordVisible = !confirmPasswordVisible }) {
                             Icon(
                                 if (confirmPasswordVisible) Icons.Default.Settings else Icons.Default.Settings,
-                                contentDescription = if (confirmPasswordVisible) "隐藏密码" else "显示密码"
+                                contentDescription = if (confirmPasswordVisible) stringResource(R.string.hide_password) else stringResource(R.string.show_password)
                             )
                         }
                     },
@@ -495,12 +495,12 @@ fun PasswordDialog(
                 },
                 enabled = password == confirmPassword && password.isNotEmpty()
             ) {
-                Text("确定")
+                Text(stringResource(R.string.confirm_button))
             }
         },
         dismissButton = {
             TextButton(onClick = onDismiss) {
-                Text("取消")
+                Text(stringResource(R.string.cancel_button))
             }
         }
     )
@@ -512,23 +512,23 @@ fun UsageReportDialog(
 ) {
     AlertDialog(
         onDismissRequest = onDismiss,
-        title = { Text("今日使用报告") },
+        title = { Text(stringResource(R.string.today_usage_report)) },
         text = {
             Column {
-                UsageReportItem("总使用时间", "1小时30分钟", EagleBlue40)
+                UsageReportItem(stringResource(R.string.total_usage_time), stringResource(R.string.usage_time_sample), EagleBlue40)
                 Spacer(modifier = Modifier.height(8.dp))
-                UsageReportItem("游戏时间", "45分钟", ErrorRed)
+                UsageReportItem(stringResource(R.string.game_time), stringResource(R.string.game_time_sample), ErrorRed)
                 Spacer(modifier = Modifier.height(8.dp))
-                UsageReportItem("学习时间", "30分钟", EagleGreen40)
+                UsageReportItem(stringResource(R.string.study_time), stringResource(R.string.study_time_sample), EagleGreen40)
                 Spacer(modifier = Modifier.height(8.dp))
-                UsageReportItem("休息次数", "3次", WarningOrange)
+                UsageReportItem(stringResource(R.string.break_count), stringResource(R.string.break_count_sample), WarningOrange)
                 Spacer(modifier = Modifier.height(8.dp))
-                UsageReportItem("距离警告", "2次", ErrorRed)
+                UsageReportItem(stringResource(R.string.distance_warnings), stringResource(R.string.distance_warnings_sample), ErrorRed)
             }
         },
         confirmButton = {
             TextButton(onClick = onDismiss) {
-                Text("确定")
+                Text(stringResource(R.string.confirm_button))
             }
         }
     )

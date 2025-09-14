@@ -1,6 +1,5 @@
 package com.snow.eagleguardian
 
-import android.content.Context
 import android.os.Bundle
 import androidx.activity.ComponentActivity
 import androidx.activity.compose.setContent
@@ -40,11 +39,6 @@ fun EagleGuardianApp() {
     val currentLanguage by LanguageManager.getCurrentLanguage(context).collectAsStateWithLifecycle(
         initialValue = LanguageManager.getDefaultLanguage()
     )
-    
-    // 应用语言设置
-    val localizedContext = remember(currentLanguage) {
-        LanguageManager.applyLanguage(context, currentLanguage)
-    }
     
     when (currentScreen) {
         "home" -> HomeScreen(

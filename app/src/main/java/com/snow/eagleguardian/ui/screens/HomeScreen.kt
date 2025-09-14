@@ -19,6 +19,7 @@ import androidx.compose.ui.graphics.vector.ImageVector
 import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.text.style.TextAlign
+import androidx.compose.ui.text.style.TextOverflow
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import android.util.Log
@@ -65,25 +66,49 @@ fun HomeScreen(
             NavigationBar {
                 NavigationBarItem(
                     icon = { Icon(Icons.Default.Home, contentDescription = stringResource(R.string.home)) },
-                    label = { Text(stringResource(R.string.home)) },
+                    label = { 
+                        Text(
+                            text = stringResource(R.string.home),
+                            maxLines = 1,
+                            overflow = TextOverflow.Ellipsis
+                        ) 
+                    },
                     selected = selectedTab == 0,
                     onClick = { selectedTab = 0 }
                 )
                 NavigationBarItem(
                     icon = { Icon(CustomIcons.Apps, contentDescription = stringResource(R.string.app_management_nav)) },
-                    label = { Text(stringResource(R.string.app_management_nav)) },
+                    label = { 
+                        Text(
+                            text = stringResource(R.string.app_management_nav),
+                            maxLines = 1,
+                            overflow = TextOverflow.Ellipsis
+                        ) 
+                    },
                     selected = selectedTab == 1,
                     onClick = { selectedTab = 1; onNavigateToAppManagement() }
                 )
                 NavigationBarItem(
                     icon = { Icon(CustomIcons.EyeProtection, contentDescription = stringResource(R.string.eye_protection_nav)) },
-                    label = { Text(stringResource(R.string.eye_protection_nav)) },
+                    label = { 
+                        Text(
+                            text = stringResource(R.string.eye_protection_nav),
+                            maxLines = 1,
+                            overflow = TextOverflow.Ellipsis
+                        ) 
+                    },
                     selected = selectedTab == 2,
                     onClick = { selectedTab = 2; onNavigateToEyeProtection() }
                 )
                 NavigationBarItem(
                     icon = { Icon(CustomIcons.ParentControl, contentDescription = stringResource(R.string.parent_control_nav)) },
-                    label = { Text(stringResource(R.string.parent_control_nav)) },
+                    label = { 
+                        Text(
+                            text = stringResource(R.string.parent_control_nav),
+                            maxLines = 1,
+                            overflow = TextOverflow.Ellipsis
+                        ) 
+                    },
                     selected = selectedTab == 3,
                     onClick = { selectedTab = 3; onNavigateToParentControl() }
                 )
@@ -105,9 +130,9 @@ fun HomeScreen(
             // 今日使用时间卡片
             item {
                 UsageTimeCard(
-                    todayUsage = "1小时30分钟",
-                    remainingTime = "30分钟",
-                    dailyLimit = "2小时"
+                    todayUsage = stringResource(R.string.today_usage_time),
+                    remainingTime = stringResource(R.string.remaining_time_value),
+                    dailyLimit = stringResource(R.string.daily_limit_value)
                 )
             }
             
@@ -231,22 +256,25 @@ fun UsageTimeCard(
             
             Row(
                 modifier = Modifier.fillMaxWidth(),
-                horizontalArrangement = Arrangement.SpaceBetween
+                horizontalArrangement = Arrangement.SpaceEvenly
             ) {
                 UsageStatItem(
-                    label = "已使用",
+                    label = stringResource(R.string.used_time),
                     value = todayUsage,
-                    color = EagleBlue40
+                    color = EagleBlue40,
+                    modifier = Modifier.weight(1f)
                 )
                 UsageStatItem(
                     label = stringResource(R.string.remaining_time),
                     value = remainingTime,
-                    color = EagleGreen40
+                    color = EagleGreen40,
+                    modifier = Modifier.weight(1f)
                 )
                 UsageStatItem(
-                    label = "每日限制",
+                    label = stringResource(R.string.daily_limit_label),
                     value = dailyLimit,
-                    color = MaterialTheme.colorScheme.onSurface
+                    color = MaterialTheme.colorScheme.onSurface,
+                    modifier = Modifier.weight(1f)
                 )
             }
         }
@@ -257,21 +285,27 @@ fun UsageTimeCard(
 fun UsageStatItem(
     label: String,
     value: String,
-    color: Color
+    color: Color,
+    modifier: Modifier = Modifier
 ) {
     Column(
+        modifier = modifier,
         horizontalAlignment = Alignment.CenterHorizontally
     ) {
         Text(
             text = value,
             style = MaterialTheme.typography.headlineSmall,
             fontWeight = FontWeight.Bold,
-            color = color
+            color = color,
+            maxLines = 1,
+            overflow = TextOverflow.Ellipsis
         )
         Text(
             text = label,
             style = MaterialTheme.typography.bodySmall,
-            color = MaterialTheme.colorScheme.onSurface.copy(alpha = 0.7f)
+            color = MaterialTheme.colorScheme.onSurface.copy(alpha = 0.7f),
+            maxLines = 1,
+            overflow = TextOverflow.Ellipsis
         )
     }
 }

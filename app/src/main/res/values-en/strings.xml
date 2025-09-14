@@ -11,11 +11,11 @@
     
     <!-- App Management -->
     <string name="app_management">App Management</string>
-    <string name="blacklist_apps">Restricted Apps</string>
-    <string name="whitelist_apps">Allowed Apps</string>
+    <string name="blacklist_apps">Blocked</string>
+    <string name="whitelist_apps">Allowed</string>
     <string name="time_limit">Time Limit</string>
     <string name="daily_limit">Daily Limit</string>
-    <string name="single_use_limit">Single Use Limit</string>
+    <string name="single_use_limit_label">Single Use Limit</string>
     
     <!-- Eye Protection -->
     <string name="eye_protection">Eye Protection</string>
@@ -49,9 +49,9 @@
     
     <!-- Navigation -->
     <string name="home">Home</string>
-    <string name="app_management_nav">App Management</string>
-    <string name="eye_protection_nav">Eye Protection</string>
-    <string name="parent_control_nav">Parent Control</string>
+    <string name="app_management_nav">Apps</string>
+    <string name="eye_protection_nav">Eyes</string>
+    <string name="parent_control_nav">Control</string>
     
     <!-- Quick Actions -->
     <string name="quick_actions">Quick Actions</string>
@@ -89,4 +89,98 @@
     <string name="language_english">English</string>
     <string name="language_japanese">日本語</string>
     <string name="language_changed">Language changed successfully</string>
+    
+    <!-- Usage time related -->
+    <string name="today_usage_time">1h 30m</string>
+    <string name="remaining_time_value">30m</string>
+    <string name="daily_limit_value">2h</string>
+    <string name="used_time">Used</string>
+    <string name="daily_limit_label">Daily Limit</string>
+    
+    <!-- Eye protection related -->
+    <string name="current_distance">Current Distance</string>
+    <string name="warning_threshold">Warning Threshold</string>
+    <string name="next_break">Next Break</string>
+    <string name="break_interval_label">Break Interval</string>
+    <string name="minutes_after">minutes later</string>
+    <string name="every_minutes">Every %d minutes</string>
+    <string name="break_duration_minutes">Rest for %d minutes</string>
+    <string name="distance_warning_threshold">Warn when distance is less than %d cm</string>
+    <string name="night_mode_active">Currently in night eye care mode</string>
+    <string name="night_mode_enabled">Night eye care mode enabled</string>
+    <string name="settings_options">Settings Options</string>
+    <string name="enter">Enter</string>
+    
+    <!-- Log messages -->
+    <string name="log_open_usage_report">Open usage report</string>
+    <string name="log_open_interval_settings">Open interval settings dialog</string>
+    <string name="log_open_duration_settings">Open duration settings dialog</string>
+    <string name="log_open_distance_settings">Open distance settings dialog</string>
+    <string name="log_open_time_settings">Open time settings dialog</string>
+    
+    <!-- Comments -->
+    <string name="welcome_card_comment">Welcome Card</string>
+    <string name="usage_time_card_comment">Today\'s Usage Time Card</string>
+    <string name="quick_actions_comment">Quick Actions</string>
+    <string name="status_alerts_comment">Status Alerts</string>
+    <string name="distance_monitor_card_comment">Distance Monitor Status Card</string>
+    <string name="break_reminder_card_comment">Break Reminder Status Card</string>
+    <string name="night_mode_card_comment">Night Mode Card</string>
+    <string name="settings_options_comment">Settings Options</string>
+    
+    <!-- App management related -->
+    <string name="game1">Game 1</string>
+    <string name="video_app">Video App</string>
+    <string name="study_app">Study App</string>
+    <string name="reading_app">Reading App</string>
+    <string name="tabs_comment">Tabs</string>
+    <string name="app_list_comment">App List</string>
+    <string name="time_limit_dialog_comment">Time Limit Settings Dialog</string>
+    <string name="save_time_limit_settings">Save time limit settings</string>
+    <string name="save_to_datastore">Can save to DataStore or database here</string>
+    <string name="temporarily_update_local">Temporarily update local state only</string>
+    <string name="app_icon_placeholder">App icon placeholder</string>
+    <string name="single_use_limit">Single: %d minutes</string>
+    <string name="daily_use_limit">Daily: %d minutes</string>
+    <string name="settings_icon">Settings</string>
+    <string name="set_time_limit_for">Set Time Limit - %s</string>
+    <string name="single_use_limit_minutes">Single Use Limit (minutes)</string>
+    <string name="daily_use_limit_minutes">Daily Use Limit (minutes)</string>
+    <string name="save_button">Save</string>
+    <string name="cancel_button">Cancel</string>
+    
+    <!-- Parent control related -->
+    <string name="advanced_settings">Advanced Settings</string>
+    <string name="app_time_limits_title">App Time Limits</string>
+    <string name="eye_protection_settings_title">Eye Protection Settings</string>
+    <string name="usage_statistics_title">Usage Statistics</string>
+    <string name="backup_restore_title">Backup &amp; Restore</string>
+    <string name="password_protection_enabled">Password protection enabled</string>
+    <string name="password_protection_prompt">Please set parent password to protect settings</string>
+    <string name="set_password_button">Set Password</string>
+    <string name="view_today_usage">View today\'s usage</string>
+    <string name="view_action">View</string>
+    <string name="remote_management_enabled">Remote management enabled</string>
+    <string name="remote_management_prompt">Enable to manage from other devices</string>
+    <string name="device_admin_title">Device Administrator</string>
+    <string name="uninstall_protection_enabled">Uninstall protection enabled</string>
+    <string name="uninstall_protection_prompt">Enable to prevent app uninstallation</string>
+    <string name="enter_action">Enter</string>
+    <string name="set_parent_password">Set Parent Password</string>
+    <string name="password_label">Password</string>
+    <string name="confirm_password_label">Confirm Password</string>
+    <string name="hide_password">Hide Password</string>
+    <string name="show_password">Show Password</string>
+    <string name="confirm_button">Confirm</string>
+    <string name="today_usage_report">Today\'s Usage Report</string>
+    <string name="total_usage_time">Total Usage Time</string>
+    <string name="game_time">Game Time</string>
+    <string name="study_time">Study Time</string>
+    <string name="break_count">Break Count</string>
+    <string name="distance_warnings">Distance Warnings</string>
+    <string name="usage_time_sample">1 hour 30 minutes</string>
+    <string name="game_time_sample">45 minutes</string>
+    <string name="study_time_sample">30 minutes</string>
+    <string name="break_count_sample">3 times</string>
+    <string name="distance_warnings_sample">2 times</string>
 </resources>
